@@ -1,0 +1,11 @@
+<div ng-repeat="(key, value) in patient">
+  <label><span ng-bind="key | PrettyKey"></span>: &nbsp;</label><span ng-bind="value"></span>
+</div>
+<div>
+  <form novalidate class="form-group">
+    <div>
+      <a class="btn button" href="#!/contract">Back</a>
+      <input class="btn button" type="button" ng-disabled="patient.submitted || !patient.accepts_contract" ng-click="Submit()" value="Submit" />
+    </div>
+  </form>
+</div>

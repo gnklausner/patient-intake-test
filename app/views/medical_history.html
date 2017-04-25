@@ -1,0 +1,24 @@
+<div>
+  <form novalidate >
+    <div class="form-group">
+      Please list conditions present in: 
+      <div ng-repeat="relationship in relevant_relationships">
+        <label>{{relationship}}: <input class="form-control" type="text" ng-model="patient[relationship]" /></label><br />
+      </div>
+
+      <label>Current Medications: <input class="form-control" type="text" ng-model="patient.medications" /></label><br />
+
+      Diseases: <label class="checkbox-inline" ng-repeat="disease in diseases">
+        <input type="checkbox" ng-model="patient.diseases[disease]" />{{disease}}<br />
+      </label><br />
+
+      <label>Allergies: <input class="form-control" type="text" ng-model="patient.allergies" /></label><br />
+
+      <a class="btn button" href="#!/demographics">Back</a>
+      <a class="btn button" href="#!/contract">Next</a>      
+      <input class="btn button" style="float:right;" type="button" ng-click="ResetPatient()" value="Reset" />
+    </div>
+  </form>
+</div>
+
+<!--family history, medications, diseases, allergies-->

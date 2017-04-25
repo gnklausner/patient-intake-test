@@ -6,19 +6,30 @@
   <link rel="stylesheet" href="css/normalize.css"></link>
   <link rel="stylesheet" href="css/unsemantic-grid-responsive.css"></link>
   <link rel="stylesheet" href="css/app.css"></link>
+  <link data-require="bootstrap-css@3.x" data-semver="3.1.1" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
 </head>
 
 <body>
-<div class="content grid-container" ng-app="todoApp">
+<div class="content grid-container" ng-app="parsley">
+  <!--<div>
+    <uib-tabset active="active">
+      <uib-tab index="0" heading="Demographics"><a href="#!/demographics">[Demographics]</a></uib-tab>
+      <uib-tab index="1" ui-href="#!/history" heading="Medical History"><a href="#!/history">[Medical History]</a></uib-tab>
+      <uib-tab index="2" heading="Contract"><a href="#!/contract">[Contract]</a></uib-tab>
+      <uib-tab index="3" heading="Summary"><a href="#!/summary">[Summary]</a></uib-tab>
+      <uib-tab index="4" heading="Submit"><a href="#!/submit">[Submit]</a></uib-tab>
+    </uib-tabset>
+  </div>-->
+  <div ng-controller="MainController">
+    <ul class="list-inline">
+      <li><a ng-class="{active: IsActive('/demographics')}" href="#!/demographics">[Demographics]</a></li>
+      <li><a ng-class="{active: IsActive('/history')}"  href="#!/history">[Medical History]</a></li>
+      <li><a ng-class="{active: IsActive('/contract')}"  href="#!/contract">[Contract]</a></li>
+      <li><a ng-class="{active: IsActive('/summary')}"  href="#!/summary">[Summary]</a></li>
+    </ul>
+  </div>
 
   <div ng-view></div>
-
-  <div
-    ng-controller="FooterCtrl"
-    class="footer"
-    >Angular &amp; Browserify Example, Version: {{version}} <a
-      href="#/imprint">[Imprint]</a>
-  </div>
 
 </div>
 

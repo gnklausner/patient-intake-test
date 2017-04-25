@@ -1,9 +1,10 @@
 'use strict';
 
-var app = require('angular').module('todoApp');
+var app = require('angular').module('parsley');
 
-app.controller('EditTodoCtrl', require('./edit_todo'));
-app.controller('FooterCtrl', require('./footer'));
-app.controller('TodoCtrl', require('./todo'));
-app.controller('TodoListCtrl', require('./todo_list'));
-app.controller('ImprintCtrl', require('./imprint'));
+app.controller('MainController', require('./main'));
+app.controller('DemographicsController', require('./demographics'));
+app.controller('MedicalHistoryController', require('./medical_history'));
+app.controller('ContractController', require('./contract'));
+app.controller('SummaryController', require('./summary'));
+app.controller('SubmitController', require('./submit'));

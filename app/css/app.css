@@ -151,6 +151,11 @@ a:hover.sidebar-item-active {
   text-decoration: inherit;
 }
 
+.active {
+  font-weight: bold;
+  color: black;
+}
+
 /* needs to be defined after sidebar-item */
 .sidebar-item-active {
   font-weight: bold;

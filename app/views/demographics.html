@@ -1,0 +1,46 @@
+<div>
+  <form novalidate >
+    <div class="form-group">
+      <label>First Name: <input class="form-control" type="text" ng-model="patient.first_name" /></label><br />
+
+      <label>Last Name: <input class="form-control" type="text" ng-model="patient.last_name" /></label><br />
+
+      Sex: <label><input type="radio" ng-model="patient.sex" value="Male" />Male</label>
+      <label><input type="radio" ng-model="patient.sex" value="Female" />Female</label><br />
+
+      <label>Birth Date: <input class="form-control" type="date" ng-model="patient.birthdate" /></label><br />
+
+      <label>E-mail: <input type="email" ng-model="patient.email" /></label><br />
+
+      <label>Phone Number: <input type="test" ng-model="patient.phone" /></label><br />
+
+      <label>Street Address: <input type="test" ng-model="patient.address" /></label><br />
+
+      <label>City: <input type="test" ng-model="patient.city" /></label><br />
+
+      <label>State: <input type="test" ng-model="patient.state" /></label><br />
+
+      <label>Zipcode: <input type="number" size="5" ng-model="patient.zipcode" /></label><br />
+
+      Marital Status:
+      <label ng-repeat="status in marital_statuses">
+        <input type="radio" ng-model="patient.status" value="{{status}}" />{{status}}<br />
+      </label><br />
+
+      <a class="btn button" href="#!/history">Next</a>      
+      <input class="btn button" style="float:right;" type="reset" ng-click="ResetPatient()" value="Reset" />
+    </div>
+  </form>
+</div>
+
+<!--First Name
+Last Name
+Gender
+Date of Birth
+Email
+Phone Number
+Street Address
+City
+State
+Zip
+Marital Status: Married, Single, Divorced, Life Partner, Separated, Widowed, Other-->

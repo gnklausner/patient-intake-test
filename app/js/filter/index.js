@@ -2,4 +2,4 @@
 
 var app = require('angular').module('parsley');
 
-app.service('PatientService', require('./patient'));
+app.filter('PrettyKey', require('./pretty_keys'));
