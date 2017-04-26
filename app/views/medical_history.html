@@ -3,16 +3,16 @@
     <div class="form-group">
       Please list conditions present in: 
       <div ng-repeat="relationship in relevant_relationships">
-        <label>{{relationship}}: <input class="form-control" type="text" ng-model="patient[relationship]" /></label><br />
+        <label>{{relationship}}: <input type="text" ng-model="patient[relationship]" /></label><br />
       </div>
 
-      <label>Current Medications: <input class="form-control" type="text" ng-model="patient.medications" /></label><br />
+      <label>Current Medications: <input type="text" ng-model="patient.medications" /></label><br />
 
-      Diseases: <label class="checkbox-inline" ng-repeat="disease in diseases">
+      <b>Diseases:&nbsp;</b><label class="checkbox-inline" ng-repeat="disease in diseases">
         <input type="checkbox" ng-model="patient.diseases[disease]" />{{disease}}<br />
       </label><br />
 
-      <label>Allergies: <input class="form-control" type="text" ng-model="patient.allergies" /></label><br />
+      <label>Allergies: <input type="text" ng-model="patient.allergies" /></label><br />
 
       <a class="btn button" href="#!/demographics">Back</a>
       <a class="btn button" href="#!/contract">Next</a>      
